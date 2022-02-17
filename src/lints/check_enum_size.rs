@@ -35,7 +35,7 @@ impl<'tcx> rustc_lint::LateLintPass<'tcx> for CheckEnumSize {
                     // dbg!(type_.size.bytes());
                     variant_size += type_.size.bytes();
                 }
-                temp.push((variant_size, variant.ident.to_string()));
+                temp.push((variant_size, variant.name.to_string()));
             }
             // dbg!(temp);
             let mut max_size_index = 0;
